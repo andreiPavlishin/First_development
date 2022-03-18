@@ -1,0 +1,304 @@
+* {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+// .hidden {
+//     position: absolute;
+//     width: 1px;
+//     height: 1px;
+//     clip: rect(0px 0px 0px 0px);
+// }
+.header {
+    background-color: #222222;
+    ;
+}
+
+.navi {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0px;
+    align-items: end;
+}
+
+.navi_left {
+    display: flex;
+    gap: 40px; // расстояние между flex, аналог margin отлько практичней.
+}
+
+.navi_right {
+    display: flex;
+    gap: 33px;
+}
+
+.navi_search_btm {
+    background: transparent; //Делает цвет прозрацным
+    // Можно также использовать background: none?
+    border: none;
+}
+
+.navi_menu_btm {
+    background: transparent; //Делает цвет прозрацным
+    border: none;
+}
+
+.promo {
+    background-color: #F1E4E6;
+}
+
+.promo_con {
+    background-image: url(../img/men_fo_banner.png);
+    background-repeat: no-repeat;
+    background-position: -228px;
+    min-height: 760px;
+}
+
+.promo_position {
+    display: flex;
+    float: right;
+    padding: 290px 100px 0 0;
+    gap: 16px;
+}
+
+.band {
+    min-width: 12px;
+    background-color: #F16D7F;
+}
+
+.main_text {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 40px;
+    margin: 0;
+}
+
+.main_text span {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38.4px;
+}
+
+.span_text_color {
+    color: #F16D7F;
+}
+
+.content {
+    padding-top: 65px;
+    flex-grow: 1;
+}
+
+.offer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 65px;
+    gap: 30px;
+}
+
+.offer_box {
+    position: relative; // Для родиля чтобы можно пыло писать по верх картинки
+    text-align: center;
+}
+
+.offer_link {
+    position: absolute; // Для дочернего чтобы можно пыло писать по верх картинки 
+    top: 50%; // Позиционирование
+    left: 50%; // Позиционирование
+    transform: translate(-50%, -50%); // Позиционирование
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+.offer_link span {
+    color: #F16D7F;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 400;
+}
+
+.products {
+    padding-top: 96px;
+}
+
+.products_title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0px;
+}
+
+.products_paragraph {
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9F9F9F;
+    margin: 0px;
+}
+
+.products_box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 48px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    background-color: #F8F8F8;
+}
+
+.text_box {
+    padding: 0 28px 0 17px;
+}
+
+.box h3 {
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.box p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5D5D5D;
+}
+
+.btm_posotion {
+    text-align: center;
+    padding-top: 48px;
+}
+
+.btn_content {
+    width: 220px;
+    border: 1px solid #FF6A6A;
+    display: inline-block;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #F26376;
+}
+
+.advantages {
+    margin-top: 95px;
+    background: #222224;
+}
+
+.advantages_box {
+    display: flex;
+    gap: 30px;
+}
+
+.advantages_box h2 {
+    font-size: 19.96px;
+    line-height: 24px;
+    color: #FBFBFB;
+}
+
+.advantages_box p {
+    font-weight: 300;
+    font-size: 13.972px;
+    line-height: 17px;
+    text-align: center;
+    color: #FBFBFB;
+}
+
+.info_advantages {
+    padding: 100px 0 100px;
+    text-align: center;
+}
+
+.subscribe {
+    background-image: url(../img/background_subscribe.jpg);
+}
+
+.info_subscribe {
+    padding: 100px 0 120px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.authors_words {
+    width: 300px;
+}
+
+.feedback {
+    width: 560px;
+}
+
+.feedback h2 {
+    font-size: 24px;
+    line-height: 167.2%;
+    /* or 40px */
+    text-align: center;
+    color: #222224;
+}
+
+.feedback span {
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.forma_subscribe {
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    border-radius: 20px 0 0 20px;
+    background: #E1E1E1;
+    width: 255px;
+    height: 50px;
+    padding-left: 22px;
+    border: none;
+}
+
+.btm_subscribe {
+    display: inline-block;
+    width: 100px;
+    background: #F16D7F;
+    color: #FFFFFF;
+    height: 50px;
+    border-radius: 0 20px 20px 0;
+    border: none;
+}
+
+.footer {
+    background: #222224;
+    color: #FBFBFB;
+}
+
+.footer_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.messengers {
+    display: flex;
+    gap: 8px;
+}
