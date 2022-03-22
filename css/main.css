@@ -36,6 +36,14 @@ a {
   align-items: end;
 }
 
+.navi_icon svg {
+  fill: #FFFFFF;
+}
+
+.navi_icon:hover svg {
+  fill: #F16D7F;
+}
+
 .navi_left {
   display: flex;
   gap: 40px;
@@ -56,19 +64,20 @@ a {
   border: none;
 }
 
-.breadcrumbs {
+.page_title {
   background-color: #F8F3F4;
 }
 
 .navi_crumbs {
   display: flex;
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
   padding: 60px 0;
 }
 
 .nevarrivals {
   color: #F16D7F;
+  font-weight: normal;
   font-size: 24px;
   line-height: 29px;
 }
@@ -99,9 +108,6 @@ a {
 }
 
 .promo_con {
-  background-image: url(../img/men_fo_banner.png);
-  background-repeat: no-repeat;
-  background-position: -228px;
   min-height: 760px;
 }
 
@@ -240,6 +246,12 @@ a {
   text-align: center;
   text-decoration: none;
   color: #F26376;
+  transition: all 0.5s ease;
+}
+
+.btn_content:hover {
+  background-color: #F16D7F;
+  color: #FFFFFF;
 }
 
 .advantages {
@@ -273,6 +285,8 @@ a {
 
 .subscribe {
   background-image: url(../img/background_subscribe.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .info_subscribe {
@@ -342,4 +356,23 @@ a {
 .messengers {
   display: flex;
   gap: 8px;
+}
+
+.messengers_link {
+  background-color: #FFFFFF;
+  color: #222;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.messengers_link:hover {
+  background-color: #F16D7F;
+  color: #FFFFFF;
+}
+
+.fa-brands {
+  font-size: 15px;
 }/*# sourceMappingURL=main.css.map */
