@@ -44,6 +44,21 @@ a {
     align-items: end;
 }
 
+.basket_number {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 15px;
+    right: 140px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    font-size: 12px;
+    background-color: #F16D7F;
+    color: #fff;
+}
+
 .navi_icon svg {
     fill: #FFFFFF; // fill (аналогия с color) - Назначает цвет для in line svg
 }
@@ -63,7 +78,7 @@ a {
 }
 
 .navi_search_btm {
-    background: transparent; //Делает цвет прозрацным
+    background: transparent; //Делает цвет прозрачным
     // Можно также использовать background: none?
     border: none;
 }
@@ -283,6 +298,32 @@ a {
 .btn_content:hover {
     background-color: #F16D7F;
     color: #FFFFFF;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination_link {
+    display: inline;
+}
+
+.pagination_link svg {
+    fill: #000000;
+}
+
+.pagination_link:hover svg {
+    fill: #F16D7F;
+}
+
+.pagination_btm {
+    font-weight: 300;
+    border: none;
+    background: transparent;
+}
+
+.pagination_btm:hover {
+    color: #F16D7F;
 }
 
 .advantages {
