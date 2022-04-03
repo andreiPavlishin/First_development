@@ -22,6 +22,11 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-size: 14px;
+    line-height: 17px;
+}
+
 .container {
     width: 1140px;
     margin: 0 auto;
@@ -35,6 +40,7 @@ a {
     display: flex;
 }
 
+//* шапка *// 
 .header {
     background-color: #222222;
     ;
@@ -130,6 +136,7 @@ a {
     font-weight: normal;
 }
 
+//* промо *//
 .promo {
     background-color: #F1E4E6;
 }
@@ -174,9 +181,14 @@ a {
     color: $main-color;
 }
 
+//* контент *//
 .content {
     padding-top: 65px;
     flex-grow: 1;
+}
+
+.content_product {
+    padding-bottom: 130px;
 }
 
 .content_burger_menu {
@@ -202,6 +214,114 @@ a {
     display: flex;
     gap: 10px;
     padding-right: 30px;
+}
+
+.billboard {
+    background-color: #F7F7F7;
+}
+
+.billboard_navi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 70px;
+}
+
+.billbord_choice {
+    width: 47px;
+    height: 47px;
+    fill: #000000;
+    &:hover {
+        fill: $main-color;
+    }
+}
+
+.product_description {
+    border: 1px solid #EAEAEA;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    margin-top: -70px;
+    padding-bottom: 65px;
+}
+
+.product_info {
+    padding-top: 64px;
+    .product_main_p {
+        color: $main-color;
+        font-weight: 300;
+        &:after {
+            // псевдо элемент полоска (розовая полоска)
+            content: '';
+            display: block;
+            height: 3px;
+            background-color: #EF5B70;
+            margin: 0 auto;
+            width: 63px;
+            margin-top: 12px;
+        }
+    }
+    .product_h2 {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        color: #4D4D4D;
+    }
+    .product_p {
+        font-weight: 300;
+        padding: 50px 0px 30px;
+    }
+    .product_price {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: #EF5B70;
+        &:after {
+            // псевдо жлемент (серая полоска)
+            content: "";
+            display: block;
+            height: 1px;
+            width: 640px;
+            background-color: #EAEAEA;
+            margin: 0 auto;
+            margin-top: 65px;
+            margin-bottom: 65px;
+        }
+    }
+}
+
+.product_basket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .menu_choice {
+        display: flex;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+        .product_choice {
+            display: flex;
+            gap: 10px;
+            padding-right: 23px;
+        }
+    }
+    .product_basket_choice {
+        width: 210px;
+        border: 1px solid #FF6A6A;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 14px 23px;
+        margin-top: 50px;
+        transition: all 0.5s ease;
+        .product_basket_choice_text {
+            color: #F26376;
+        }
+    }
 }
 
 .offer {
@@ -256,6 +376,14 @@ a {
     flex-wrap: wrap;
     gap: 30px;
     padding-top: 48px;
+}
+
+.catalog_box {
+    padding-top: 70px;
+}
+
+.products_cards {
+    padding-top: 130px;
 }
 
 .box {
@@ -332,6 +460,7 @@ a {
     }
 }
 
+//* преимущества *//
 .advantages {
     margin-top: 95px;
     background: #222224;
@@ -361,6 +490,7 @@ a {
     text-align: center;
 }
 
+//* подписка *// 
 .subscribe {
     background-image: url(../img/background_subscribe.jpg);
     background-size: cover;
@@ -420,6 +550,7 @@ a {
     border: none;
 }
 
+//* подвал *// 
 .footer {
     background: #222224;
     color: #FBFBFB;
