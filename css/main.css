@@ -82,9 +82,14 @@ p {
   gap: 33px;
 }
 
+.navi_icon {
+  cursor: pointer;
+}
+
 .navi_search_btm {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .navi_menu_btm {
@@ -303,10 +308,11 @@ p {
   border: 1px solid #FF6A6A;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 14px 23px;
   margin-top: 50px;
   transition: all 0.5s ease;
+  gap: 23px;
 }
 .product_basket .product_basket_choice .product_basket_choice_text {
   color: #F26376;
@@ -446,6 +452,86 @@ p {
 }
 .pagination_btm:hover {
   color: #F16D7F;
+}
+
+.registration_form {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 64px;
+  padding-bottom: 95px;
+}
+.registration_form .user_form {
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+.registration_form .user_form .main_text_form {
+  font-weight: 300;
+  color: #222222;
+}
+.registration_form .user_form .user_data {
+  padding: 13px 17px 16px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  border: 1px solid #A4A4A4;
+  color: #B1B1B1;
+}
+.registration_form .user_form .text_form {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 0px;
+}
+.registration_form .user_form .btm_form {
+  width: 170px;
+  margin-top: 40px;
+  color: #F16D7F;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  background: transparent;
+  border: 1px solid #F16D7F;
+  padding: 16px 30px;
+  transition: all 0.5s ease;
+}
+.registration_form .user_form .btm_form:hover {
+  color: #fff;
+  background-color: #F16D7F;
+}
+.registration_form .radio_form {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+}
+.registration_form .radio_form .radio_text {
+  padding-left: 10px;
+  padding-right: 20px;
+}
+.registration_form .registration_loyalty {
+  max-width: 650px;
+}
+.registration_form .registration_loyalty .loyality_text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+.registration_form .registration_loyalty .loyality_list {
+  padding-left: 25px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style-image: url(../img/vector_list.svg);
+}
+.registration_form .registration_loyalty .loyality_list .oyality_list_text {
+  padding-left: 23px;
 }
 
 .advantages {
