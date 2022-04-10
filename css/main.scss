@@ -1,5 +1,16 @@
 //* Переменные * 
 $main-color:#F16D7F;
+@mixin transform {
+    transform: scale(1.2);
+    color: $main-color;
+}
+
+@mixin card_product_text {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+}
+
 * {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -58,13 +69,13 @@ p {
     position: absolute;
     align-items: center;
     justify-content: center;
-    top: 15px;
-    right: 140px;
+    top: -5px;
+    right: -9px;
     width: 19px;
     height: 19px;
     border-radius: 50%;
     font-size: 12px;
-    background-color: $main-color;
+    background-color: #F16D7F;
     color: #fff;
 }
 
@@ -87,6 +98,7 @@ p {
 
 .navi_icon {
     cursor: pointer;
+    position: relative;
 }
 
 .navi_search_btm {
@@ -315,6 +327,7 @@ p {
         }
     }
     .product_basket_choice {
+        cursor: pointer;
         width: 210px;
         border: 1px solid #FF6A6A;
         display: flex;
@@ -322,10 +335,21 @@ p {
         justify-content: center;
         padding: 14px 23px;
         margin-top: 50px;
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
         gap: 23px;
+        fill: $main-color;
+        background-color: transparent;
         .product_basket_choice_text {
-            color: #F26376;
+            color: $main-color;
+            &:hover {
+                color: #fff;
+            }
+        }
+        &:hover {
+            background-color: $main-color;
+        }
+        &:hover {
+            fill: #FFFFFF;
         }
     }
 }
@@ -349,6 +373,11 @@ p {
     transform: translate(-50%, -50%); // Позиционирование
     color: #FFFFFF;
     font-weight: 300;
+    .text_offer {
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }
 
 .offer_link span {
@@ -395,7 +424,7 @@ p {
 .box {
     display: flex;
     flex-direction: column;
-    width: 360px;
+    max-width: 360px;
     background-color: #F8F8F8;
 }
 
@@ -407,6 +436,9 @@ p {
     font-size: 13px;
     line-height: 16px;
     color: #000000;
+    &:hover {
+        font-weight: 800;
+    }
 }
 
 .box p {
@@ -428,8 +460,8 @@ p {
     padding: 15px 40px;
     text-align: center;
     text-decoration: none;
-    color: #F26376;
-    transition: all 0.5s ease; // скорость реагирования (переключения hover)
+    color: $main-color;
+    transition: all 0.3s ease; // скорость реагирования (переключения hover)
     &:hover {
         background-color: $main-color;
         color: #FFFFFF;
@@ -444,25 +476,18 @@ p {
     margin-top: 50px;
     color: #EBEBEB;
     text-align: center;
-}
-
-.pagination_link {
-    display: inline;
-}
-
-.pagination_link svg {
-    fill: #000000;
-    &:hover {
-        fill: $main-color;
-    }
-}
-
-.pagination_btm {
-    font-weight: 300;
-    border: none;
-    background: transparent;
-    &:hover {
-        color: $main-color;
+    .pagination_link {
+        display: inline;
+        .pagination_btm {
+            font-weight: 300;
+            border: none;
+            background: transparent;
+            fill: #000000;
+            &:hover {
+                @include transform;
+                fill: $main-color;
+            }
+        }
     }
 }
 
@@ -504,7 +529,7 @@ p {
             background: transparent;
             border: 1px solid $main-color;
             padding: 16px 30px;
-            transition: all 0.5s ease;
+            transition: all 0.3s ease;
             &:hover {
                 color: #fff;
                 background-color: $main-color;
@@ -541,6 +566,183 @@ p {
             list-style-image: url(../img/vector_list.svg);
             .oyality_list_text {
                 padding-left: 23px;
+            }
+        }
+    }
+}
+
+.shopping_cart {
+    padding: 96px 0px 130px;
+    display: flex;
+    justify-content: space-between;
+    .card_product_info {
+        max-width: 650px;
+        display: flex;
+        gap: 30px;
+        margin-bottom: 40px;
+        position: relative;
+        box-shadow: 30px 30px 30px #e5e5e5;
+        .card_product_picturec {
+            max-height: 306px;
+        }
+        .card_product_closed {
+            display: flex;
+            .card_product_tex {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                color: #222222;
+            }
+            .card_closed {
+                display: flex;
+                width: 18px;
+                height: 18px;
+                align-items: center;
+                align-content: center;
+                padding: 0px;
+                border: none;
+                background: transparent;
+                margin: 30px 20px;
+            }
+        }
+        .card_product_param {
+            @include card_product_text;
+            color: #575757;
+            padding-bottom: 6px;
+            .card_product_price {
+                @include card_product_text;
+                color: $main-color;
+            }
+            .card_product_calor {
+                @include card_product_text;
+                color: #656565;
+            }
+            .card_product_size {
+                @include card_product_text;
+                color: #656565;
+            }
+            .card_product_quantity {
+                @include card_product_text;
+                border: 1px solid #EAEAEA;
+                color: #656565;
+                margin-left: 25px;
+                padding: 0px 17px;
+            }
+        }
+    }
+    .card_product_btm {
+        display: flex;
+        justify-content: space-between;
+        .clear_shopping {
+            background: transparent;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            padding: 17px 40px;
+            border: 1px solid #A4A4A4;
+        }
+        .continue_shopping {
+            background: transparent;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            padding: 17px 40px;
+            border: 1px solid #A4A4A4;
+        }
+    }
+    .total_busket {
+        width: 360px;
+        .total_busket_delivery {
+            padding-bottom: 57px;
+            .delivery_text {
+                margin-bottom: 0px;
+                font-weight: 300;
+                color: #222222;
+            }
+            .delivery_form {
+                display: flex;
+                flex-direction: column;
+                .delivery_input {
+                    margin-top: 20px;
+                    padding: 13px 17px;
+                    border: 1px solid #A4A4A4;
+                    font-weight: 300;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #222222;
+                }
+                .delivery_btm {
+                    margin-top: 25px;
+                    width: 100px;
+                    font-weight: 300;
+                    font-size: 11px;
+                    line-height: 13px;
+                    padding: 10px 14px;
+                    color: #4A4A4A;
+                    box-sizing: content-box;
+                    border: 1px solid #A4A4A4;
+                    background-color: transparent;
+                }
+            }
+        }
+        .total_busket_price {
+            background: #F5F3F3;
+            text-align: center;
+            .total_busket_price_top {
+                text-align: end;
+                &:after {
+                    // псевдо жлемент (серая полоска)
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    width: 275px;
+                    background-color: #E2E2E2;
+                    margin: 0 auto;
+                    margin-top: 21px;
+                    margin-bottom: 17px;
+                }
+                .total_busket_price_final {
+                    padding: 40px 35px 0px;
+                    .sub_total {
+                        font-weight: 400;
+                        font-size: 11px;
+                        line-height: 13px;
+                        color: #4A4A4A;
+                        padding-bottom: 12px;
+                        .sub_total_price {
+                            font-weight: 400;
+                            font-size: 11px;
+                            line-height: 13px;
+                            color: #4A4A4A;
+                            padding-left: 25px;
+                        }
+                    }
+                    .grand_total {
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #222222;
+                        .grand_total_price {
+                            font-weight: 300;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: $main-color;
+                            padding-left: 25px;
+                        }
+                    }
+                }
+            }
+            .total_busket_price_bottom {
+                .checkout_btm {
+                    padding: 16px 40px;
+                    margin-bottom: 40px;
+                    transition: all 0.3s ease;
+                    border: none;
+                    background-color: $main-color;
+                    color: #FFFFFF;
+                }
             }
         }
     }
@@ -634,6 +836,10 @@ p {
     height: 50px;
     border-radius: 0 20px 20px 0;
     border: none;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 //* подвал *// 
