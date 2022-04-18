@@ -1,5 +1,6 @@
 //* Переменные * 
 $main-color:#F16D7F;
+
 @mixin transform {
     transform: scale(1.2);
     color: $main-color;
@@ -39,7 +40,7 @@ p {
 }
 
 .container {
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -81,6 +82,7 @@ p {
 
 .navi_icon svg {
     fill: #FFFFFF; // fill (аналогия с color) - Назначает цвет для in line svg
+
     &:hover {
         fill: $main-color;
     }
@@ -210,6 +212,7 @@ p {
 
 .content_burger_menu {
     display: flex;
+    align-items: center;
     padding-top: 50px;
 }
 
@@ -218,9 +221,23 @@ p {
     position: relative;
 }
 
+.content_burger_menu_filter[open] .filter_box {
+    color: $main-color;
+    fill: $main-color;
+}
+
 .filter_box {
     display: flex;
+    align-items: center;
     gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.filter_box::-webkit-details-marker {
+    display: none;
 }
 
 .content_burger_menu_filter_overlay {
@@ -231,7 +248,7 @@ p {
     padding: 17px;
     box-sizing: border-box;
     box-shadow: 6px 4px 35px #E5E5E5;
-    ;
+    cursor: pointer;
 }
 
 .filter_item {
@@ -262,23 +279,42 @@ p {
     color: #6F6E6E;
     border: none;
     background-color: transparent;
-}
-
-.filter_text::-webkit-details-marker {
-    display: none;
+    cursor: pointer;
 }
 
 .content_burger_menu_choice {
     display: flex;
+    gap: 10px;
     color: #6F6E6E;
-    font-weight: 300;
     margin-left: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    .choice {
+        // position: relative;
+
+        .choice_overlay {
+            display: flex;
+            padding-right: 30px;
+            // position: absolute;
+            // z-index: 10;
+
+            .choice_text {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+    }
+
 }
 
-.choice {
-    display: flex;
-    gap: 10px;
-    padding-right: 30px;
+
+
+
+.choice_text::-webkit-details-marker {
+    display: none;
 }
 
 .billboard {
@@ -297,6 +333,7 @@ p {
     width: 47px;
     height: 47px;
     fill: #000000;
+
     &:hover {
         fill: $main-color;
     }
@@ -315,9 +352,11 @@ p {
 
 .product_info {
     padding-top: 64px;
+
     .product_main_p {
         color: $main-color;
         font-weight: 300;
+
         &:after {
             // псевдо элемент полоска (розовая полоска)
             content: '';
@@ -329,21 +368,25 @@ p {
             margin-top: 12px;
         }
     }
+
     .product_h2 {
         font-weight: 300;
         font-size: 18px;
         line-height: 22px;
         color: #4D4D4D;
     }
+
     .product_p {
         font-weight: 300;
         padding: 50px 0px 30px;
     }
+
     .product_price {
         font-weight: 300;
         font-size: 24px;
         line-height: 29px;
         color: #EF5B70;
+
         &:after {
             // псевдо жлемент (серая полоска)
             content: "";
@@ -362,18 +405,21 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .menu_choice {
         display: flex;
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
         color: #6F6E6E;
+
         .product_choice {
             display: flex;
             gap: 10px;
             padding-right: 23px;
         }
     }
+
     .product_basket_choice {
         cursor: pointer;
         width: 210px;
@@ -387,15 +433,19 @@ p {
         gap: 23px;
         fill: $main-color;
         background-color: transparent;
+
         .product_basket_choice_text {
             color: $main-color;
+
             &:hover {
                 color: #fff;
             }
         }
+
         &:hover {
             background-color: $main-color;
         }
+
         &:hover {
             fill: #FFFFFF;
         }
@@ -421,6 +471,7 @@ p {
     transform: translate(-50%, -50%); // Позиционирование
     color: #FFFFFF;
     font-weight: 300;
+
     .text_offer {
         &:hover {
             transform: scale(1.2);
@@ -489,20 +540,24 @@ p {
     background-color: rgba(58, 56, 56, 0.86);
     justify-content: center;
     align-items: center;
+
     .products_overlay_btm {
         border: 1px solid #fff;
         background-color: transparent;
         color: #fff;
         padding: 13px 16px;
         cursor: pointer;
+
         &:hover {
             transform: scale(1.1);
         }
+
         .products_overlay_text {
             margin-left: 10px;
             font-size: 14px;
             line-height: 17px;
         }
+
         // 1-Вариант центрирования
         // display: flex;
         // justify-content: center;
@@ -523,6 +578,7 @@ p {
     font-size: 13px;
     line-height: 16px;
     color: #000000;
+
     &:hover {
         font-weight: 800;
     }
@@ -549,6 +605,7 @@ p {
     text-decoration: none;
     color: $main-color;
     transition: all 0.3s ease; // скорость реагирования (переключения hover)
+
     &:hover {
         background-color: $main-color;
         color: #FFFFFF;
@@ -563,13 +620,16 @@ p {
     margin-top: 50px;
     color: #EBEBEB;
     text-align: center;
+
     .pagination_link {
         display: inline;
+
         .pagination_btm {
             font-weight: 300;
             border: none;
             background: transparent;
             fill: #000000;
+
             &:hover {
                 @include transform;
                 fill: $main-color;
@@ -583,14 +643,17 @@ p {
     justify-content: space-between;
     padding-top: 64px;
     padding-bottom: 95px;
+
     .user_form {
         max-width: 360px;
         display: flex;
         flex-direction: column;
+
         .main_text_form {
             font-weight: 300;
             color: #222222;
         }
+
         .user_data {
             padding: 13px 17px 16px;
             margin-bottom: 20px;
@@ -600,12 +663,14 @@ p {
             border: 1px solid #A4A4A4;
             color: #B1B1B1;
         }
+
         .text_form {
             font-weight: 300;
             font-size: 13px;
             line-height: 16px;
             margin-top: 0px;
         }
+
         .btm_form {
             width: 170px;
             margin-top: 40px;
@@ -617,30 +682,36 @@ p {
             border: 1px solid $main-color;
             padding: 16px 30px;
             transition: all 0.3s ease;
+
             &:hover {
                 color: #fff;
                 background-color: $main-color;
             }
         }
     }
+
     .radio_form {
         font-weight: 300;
         font-size: 11px;
         line-height: 13px;
         color: #000000;
+
         .radio_text {
             padding-left: 10px;
             padding-right: 20px;
         }
     }
+
     .registration_loyalty {
         max-width: 650px;
+
         .loyality_text {
             font-weight: 300;
             font-size: 24px;
             line-height: 29px;
             color: #000000;
         }
+
         .loyality_list {
             padding-left: 25px;
             font-weight: 300;
@@ -651,6 +722,7 @@ p {
             flex-direction: column;
             gap: 15px;
             list-style-image: url(../img/vector_list.svg);
+
             .oyality_list_text {
                 padding-left: 23px;
             }
@@ -662,6 +734,7 @@ p {
     padding: 96px 0px 130px;
     display: flex;
     justify-content: space-between;
+
     .card_product_info {
         max-width: 650px;
         display: flex;
@@ -669,17 +742,21 @@ p {
         margin-bottom: 40px;
         position: relative;
         box-shadow: 30px 30px 30px #e5e5e5;
+
         .card_product_picturec {
             max-height: 306px;
         }
+
         .card_product_closed {
             display: flex;
+
             .card_product_tex {
                 font-weight: 400;
                 font-size: 24px;
                 line-height: 29px;
                 color: #222222;
             }
+
             .card_closed {
                 display: flex;
                 width: 18px;
@@ -692,22 +769,27 @@ p {
                 margin: 30px 20px;
             }
         }
+
         .card_product_param {
             @include card_product_text;
             color: #575757;
             padding-bottom: 6px;
+
             .card_product_price {
                 @include card_product_text;
                 color: $main-color;
             }
+
             .card_product_calor {
                 @include card_product_text;
                 color: #656565;
             }
+
             .card_product_size {
                 @include card_product_text;
                 color: #656565;
             }
+
             .card_product_quantity {
                 @include card_product_text;
                 border: 1px solid #EAEAEA;
@@ -717,9 +799,11 @@ p {
             }
         }
     }
+
     .card_product_btm {
         display: flex;
         justify-content: space-between;
+
         .clear_shopping {
             background: transparent;
             font-weight: 300;
@@ -729,6 +813,7 @@ p {
             padding: 17px 40px;
             border: 1px solid #A4A4A4;
         }
+
         .continue_shopping {
             background: transparent;
             font-weight: 300;
@@ -739,18 +824,23 @@ p {
             border: 1px solid #A4A4A4;
         }
     }
+
     .total_busket {
         width: 360px;
+
         .total_busket_delivery {
             padding-bottom: 57px;
+
             .delivery_text {
                 margin-bottom: 0px;
                 font-weight: 300;
                 color: #222222;
             }
+
             .delivery_form {
                 display: flex;
                 flex-direction: column;
+
                 .delivery_input {
                     margin-top: 20px;
                     padding: 13px 17px;
@@ -760,6 +850,7 @@ p {
                     line-height: 16px;
                     color: #222222;
                 }
+
                 .delivery_btm {
                     margin-top: 25px;
                     width: 100px;
@@ -774,11 +865,14 @@ p {
                 }
             }
         }
+
         .total_busket_price {
             background: #F5F3F3;
             text-align: center;
+
             .total_busket_price_top {
                 text-align: end;
+
                 &:after {
                     // псевдо жлемент (серая полоска)
                     content: "";
@@ -790,14 +884,17 @@ p {
                     margin-top: 21px;
                     margin-bottom: 17px;
                 }
+
                 .total_busket_price_final {
                     padding: 40px 35px 0px;
+
                     .sub_total {
                         font-weight: 400;
                         font-size: 11px;
                         line-height: 13px;
                         color: #4A4A4A;
                         padding-bottom: 12px;
+
                         .sub_total_price {
                             font-weight: 400;
                             font-size: 11px;
@@ -806,11 +903,13 @@ p {
                             padding-left: 25px;
                         }
                     }
+
                     .grand_total {
                         font-weight: 300;
                         font-size: 16px;
                         line-height: 19px;
                         color: #222222;
+
                         .grand_total_price {
                             font-weight: 300;
                             font-size: 16px;
@@ -821,6 +920,7 @@ p {
                     }
                 }
             }
+
             .total_busket_price_bottom {
                 .checkout_btm {
                     padding: 16px 40px;
@@ -890,11 +990,14 @@ p {
     justify-content: center;
     align-items: center;
     margin-top: 120px;
+
     &:hover {
         transform: scale(1.1);
-        animation: bounce/*имя анимации*/
-        1s ease infinite alternate; //Парвметры анимации
+        animation: bounce
+            /*имя анимации*/
+            1s ease infinite alternate; //Парвметры анимации
     }
+
     .callback_img {
         width: 30px;
     }
@@ -905,6 +1008,7 @@ p {
     0% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(-30);
     }
@@ -960,6 +1064,7 @@ p {
     border-radius: 0 20px 20px 0;
     border: none;
     cursor: pointer;
+
     &:hover {
         transform: scale(1.1);
     }
@@ -990,6 +1095,7 @@ p {
     height: 32px;
     justify-content: center;
     align-items: center;
+
     &:hover {
         background-color: $main-color;
         color: #FFFFFF;
