@@ -158,24 +158,25 @@ p {
 //* промо *//
 .promo {
     background-color: #F1E4E6;
-}
-
-.promo_con {
-    // background-image: url(../img/men_fo_banner.png);
-    // background-repeat: no-repeat;
-    // background-position: -228px;
     min-height: 760px;
-}
-
-.main_video {
-    padding-top: 135px;
-}
-
-.promo_position {
     display: flex;
-    float: right;
-    padding: 290px 100px 0 0;
-    gap: 16px;
+
+    .promo_con {
+        // background-image: url(../img/men_fo_banner.png);
+        // background-repeat: no-repeat;
+        // background-position: -228px;
+        display: flex;
+        align-items: center;
+
+        .main_video {
+            padding-right: 60px;
+        }
+
+        .promo_position {
+            border-left: 12px solid $main-color;
+            padding-left: 16px;
+        }
+    }
 }
 
 .band {
@@ -202,7 +203,6 @@ p {
 
 //* контент *//
 .content {
-    padding-top: 65px;
     flex-grow: 1;
 }
 
@@ -231,9 +231,12 @@ p {
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
+
+    .filter_box_text {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+    }
 }
 
 .filter_box::-webkit-details-marker {
@@ -283,8 +286,9 @@ p {
 }
 
 .content_burger_menu_choice {
+    width: 300px;
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     color: #6F6E6E;
     margin-left: 30px;
     font-weight: 400;
@@ -296,7 +300,6 @@ p {
 
         .choice_overlay {
             display: flex;
-            padding-right: 30px;
             // position: absolute;
             // z-index: 10;
 
@@ -309,9 +312,6 @@ p {
     }
 
 }
-
-
-
 
 .choice_text::-webkit-details-marker {
     display: none;
@@ -347,11 +347,10 @@ p {
     align-items: center;
     background-color: #FFFFFF;
     margin-top: -70px;
-    padding-bottom: 65px;
 }
 
 .product_info {
-    padding-top: 64px;
+    padding-top: 65px;
 
     .product_main_p {
         color: $main-color;
@@ -388,7 +387,7 @@ p {
         color: #EF5B70;
 
         &:after {
-            // псевдо жлемент (серая полоска)
+            // псевдо элемент (серая полоска)
             content: "";
             display: block;
             height: 1px;
@@ -455,36 +454,51 @@ p {
 .offer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     padding-top: 65px;
     gap: 30px;
-}
 
-.offer_box {
-    position: relative; // Для родиля чтобы можно пыло писать по верх картинки
-    text-align: center;
-}
+    .offer_box {
+        position: relative; // Для родиля чтобы можно пыло писать по верх картинки
+        text-align: center;
 
-.offer_link {
-    position: absolute; // Для дочернего чтобы можно пыло писать по верх картинки 
-    top: 50%; // Позиционирование
-    left: 50%; // Позиционирование
-    transform: translate(-50%, -50%); // Позиционирование
-    color: #FFFFFF;
-    font-weight: 300;
+        .offer_photo {
+            width: 100%;
+        }
 
-    .text_offer {
-        &:hover {
-            transform: scale(1.2);
+        .offer_link {
+            position: absolute; // Для дочернего чтобы можно пыло писать по верх картинки 
+            top: 50%; // Позиционирование
+            left: 50%; // Позиционирование
+            transform: translate(-50%, -50%); // Позиционирование
+            color: #FFFFFF;
+            font-weight: 300;
+
+            .text_offer {
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        .offer_link span {
+            color: $main-color;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 400;
         }
     }
+
 }
 
-.offer_link span {
-    color: $main-color;
-    font-size: 24px;
-    line-height: 29px;
-    font-weight: 400;
-}
+
+
+
+
+
+
+
+
 
 .products {
     padding-top: 96px;
@@ -593,7 +607,6 @@ p {
 
 .btm_posotion {
     text-align: center;
-    padding-top: 48px;
 }
 
 .btn_content {
@@ -617,7 +630,6 @@ p {
     border: 1px solid;
     border-radius: 5px;
     margin: auto;
-    margin-top: 50px;
     color: #EBEBEB;
     text-align: center;
 
@@ -669,6 +681,7 @@ p {
             font-size: 13px;
             line-height: 16px;
             margin-top: 0px;
+            color: #B1B1B1;
         }
 
         .btm_form {
@@ -696,6 +709,10 @@ p {
         line-height: 13px;
         color: #000000;
 
+        .radio_hidden {
+            visibility: hidden;
+        }
+
         .radio_text {
             padding-left: 10px;
             padding-right: 20px;
@@ -714,17 +731,17 @@ p {
 
         .loyality_list {
             padding-left: 25px;
-            font-weight: 300;
-            font-size: 24px;
-            line-height: 29px;
-            color: #000000;
             display: flex;
             flex-direction: column;
             gap: 15px;
             list-style-image: url(../img/vector_list.svg);
 
-            .oyality_list_text {
+            .loyality_list_text {
                 padding-left: 23px;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 29px;
+                color: #000000;
             }
         }
     }
@@ -803,6 +820,7 @@ p {
     .card_product_btm {
         display: flex;
         justify-content: space-between;
+        margin-top: 50px;
 
         .clear_shopping {
             background: transparent;
@@ -826,10 +844,10 @@ p {
     }
 
     .total_busket {
-        width: 360px;
 
         .total_busket_delivery {
             padding-bottom: 57px;
+            width: 360px;
 
             .delivery_text {
                 margin-bottom: 0px;
@@ -869,6 +887,7 @@ p {
         .total_busket_price {
             background: #F5F3F3;
             text-align: center;
+            width: 360px;
 
             .total_busket_price_top {
                 text-align: end;
@@ -943,6 +962,7 @@ p {
 
 .advantages_box {
     display: flex;
+    padding: 100px 0px;
     gap: 30px;
 }
 
@@ -961,8 +981,8 @@ p {
 }
 
 .info_advantages {
-    padding: 100px 0 100px;
     text-align: center;
+    width: 360px;
 }
 
 //* подписка *// 
@@ -1104,4 +1124,148 @@ p {
 
 .fa-brands {
     font-size: 15px;
+}
+
+// адаптив // 
+@media (max-width: 1229px) {
+    .container {
+        width: 735px;
+    }
+
+    .promo {
+        min-height: 360px;
+
+        .promo_con {
+            .main_video {
+                width: 40%;
+                height: 200px;
+                padding-right: 40px;
+            }
+        }
+    }
+
+    .offer {
+        gap: 15px;
+
+        .offer_box {
+            .offer_photo {
+                width: 230px;
+            }
+
+            .big_photo {
+                width: 100%;
+            }
+        }
+    }
+
+    .content_burger_menu {
+        padding-top: 24px;
+        justify-content: space-between;
+    }
+
+    .product_description {
+        margin-top: 0px;
+        border: none;
+
+        &:after {
+            // псевдо элемент (серая полоска)
+            content: "";
+            display: block;
+            height: 1px;
+            width: 1230px;
+            background-color: #EAEAEA;
+            margin-top: 65px;
+        }
+    }
+
+    .products_box {
+        gap: 15px;
+    }
+
+    .catalog_box {
+        padding: 40px 0px;
+    }
+
+    .box_3 {
+        display: none;
+    }
+
+    .shopping_cart {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shopping_cart {
+        .card_product_info {
+            width: 735px;
+        }
+
+        .card_product_btm {
+            justify-content: space-around;
+        }
+
+    }
+
+    .total_busket {
+        padding-top: 65px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .registration_form {
+        gap: 22px;
+
+        .registration_loyalty {
+            width: 350px;
+
+            .loyality_text {
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            .loyality_list {
+                .loyality_list_text {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+        }
+
+        .radio_form {
+            .radio_hidden {
+                visibility: visible;
+            }
+        }
+    }
+
+    .advantages {
+        margin-top: 65px;
+    }
+
+    .advantages_box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0px 65px;
+    }
+
+    .products {
+        padding-bottom: 30px;
+    }
+
+    .info_subscribe {
+        flex-direction: column;
+        padding: 50px 0 140px;
+    }
+
+    .callback {
+        display: none;
+    }
+}
+
+@media (max-width: 749px) {
+    .container {
+        width: 360px;
+    }
 }
