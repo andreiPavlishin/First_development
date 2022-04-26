@@ -80,7 +80,7 @@ p {
     color: #fff;
 }
 
-.navi_icon svg {
+.navi svg {
     fill: #FFFFFF; // fill (аналогия с color) - Назначает цвет для in line svg
 
     &:hover {
@@ -98,7 +98,7 @@ p {
     gap: 33px;
 }
 
-.navi_icon {
+.navi_icon_cart {
     cursor: pointer;
     position: relative;
 }
@@ -490,15 +490,6 @@ p {
     }
 
 }
-
-
-
-
-
-
-
-
-
 
 .products {
     padding-top: 96px;
@@ -1268,4 +1259,47 @@ p {
     .container {
         width: 360px;
     }
+
+    .navi_icon_registration {
+        display: none;
+    }
+
+    .navi_icon_cart {
+        display: none;
+    }
+
+    .main_video {
+        display: none;
+    }
+
+    .main_text {
+        font-size: 38px;
+        line-height: 45px;
+    }
+
+    .main_text span {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .promo .promo_con {
+        justify-content: center;
+    }
+
+    .offer .offer_box .offer_photo {
+        width: 340px;
+    }
+
+    .offer .offer_box .big_photo {
+        min-height: 110px;
+    }
+
+    .info_subscribe {
+        padding: 50px 0 110px;
+    }
+
+    .footer_info {
+        flex-direction: column-reverse;
+    }
+
 }
