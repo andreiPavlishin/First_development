@@ -213,6 +213,7 @@ p {
 }
 
 .content {
+  min-height: 100vh;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -356,7 +357,6 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   padding-bottom: 70px;
 }
 
@@ -550,7 +550,7 @@ p {
 }
 
 .products {
-  padding-top: 96px;
+  padding: 96px 0px 50px;
 }
 
 .products_title {
@@ -836,19 +836,17 @@ p {
 }
 
 .shopping_cart .card_product_info {
-  max-width: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
   margin-bottom: 40px;
-  position: relative;
   -webkit-box-shadow: 30px 30px 30px #e5e5e5;
           box-shadow: 30px 30px 30px #e5e5e5;
 }
 
 .shopping_cart .card_product_info .card_product_picturec {
-  max-height: 306px;
+  height: 306px;
 }
 
 .shopping_cart .card_product_info .card_product_closed {
@@ -868,8 +866,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 18px;
-  height: 18px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -938,16 +934,7 @@ p {
   color: #000000;
   padding: 17px 40px;
   border: 1px solid #A4A4A4;
-}
-
-.shopping_cart .card_product_btm .continue_shopping {
-  background: transparent;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000000;
-  padding: 17px 40px;
-  border: 1px solid #A4A4A4;
+  cursor: pointer;
 }
 
 .shopping_cart .total_busket .total_busket_delivery {
@@ -1059,6 +1046,7 @@ p {
   border: none;
   background-color: #F16D7F;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .advantages {
@@ -1148,8 +1136,8 @@ p {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-30);
-            transform: translateY(-30);
+    -webkit-transform: translateY(30);
+            transform: translateY(30);
   }
 }
 
@@ -1159,8 +1147,8 @@ p {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-30);
-            transform: translateY(-30);
+    -webkit-transform: translateY(30);
+            transform: translateY(30);
   }
 }
 
@@ -1188,7 +1176,7 @@ p {
 
 .feedback span {
   font-weight: 200;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .forma_subscribe {
@@ -1205,7 +1193,7 @@ p {
   background: #E1E1E1;
   width: 255px;
   height: 50px;
-  padding-left: 22px;
+  padding: 0px 22px 0px 22px;
   border: none;
 }
 
@@ -1303,15 +1291,6 @@ p {
   }
   .product_description {
     margin-top: 0px;
-    border: none;
-  }
-  .product_description:after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 1230px;
-    background-color: #EAEAEA;
-    margin-top: 65px;
   }
   .products_box {
     gap: 15px;
@@ -1330,9 +1309,6 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .shopping_cart .card_product_info {
-    width: 735px;
   }
   .shopping_cart .card_product_btm {
     -ms-flex-pack: distribute;
@@ -1406,8 +1382,26 @@ p {
   .navi_icon_cart {
     display: none;
   }
+  .navi_crumbs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .main_video {
     display: none;
+  }
+  .filter_box .filter_box_text {
+    display: none;
+  }
+  .content_burger_menu_filter {
+    width: auto;
+  }
+  .content_burger_menu_filter_overlay {
+    width: 200px;
+  }
+  .filter_li {
+    padding-left: 0px;
   }
   .main_text {
     font-size: 38px;
@@ -1425,17 +1419,42 @@ p {
   .offer .offer_box .offer_photo {
     width: 340px;
   }
+  .total_busket {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .shopping_cart .card_product_info {
+    gap: 17px;
+  }
+  .shopping_cart .card_product_info .card_product_closed .card_product_tex {
+    font-size: 16px;
+    line-height: 19px;
+  }
   .offer .offer_box .big_photo {
     min-height: 110px;
   }
   .info_subscribe {
     padding: 50px 0 110px;
   }
+  .shopping_cart .card_product_btm .clear_shopping {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 9px;
+    cursor: pointer;
+  }
   .footer_info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  .feedback {
+    width: 340px;
+  }
+  .feedback span {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=main.css.map */
